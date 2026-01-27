@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة سلامة الإخوة | للمعدات الصناعية والسلامة</title>
+    
+    <!-- Google Fonts: Cairo for professional Arabic typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            yellow: '#fbbf24', // Safety Yellow
+                            dark: '#111827',   // Industrial Black/Grey
+                            blue: '#1e3a8a',   // Trust Blue
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fbbf24; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d97706; 
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.7)), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-brand-dark text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <!-- Use local logo.png as the site logo -->
+                <img src="logo.png" alt="شعار شركة سلامة الإخوة" class="w-12 h-12 object-contain rounded-full bg-white/10 p-1 group-hover:scale-105 transition-transform" />
+                <div>
+                    <h1 class="text-xl font-bold leading-none">شركة سلامة الإخوة</h1>
+                    <span class="text-xs text-gray-400">للأدوات الصناعية والسلامة</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+                <a href="#home" class="hover:text-brand-yellow transition font-semibold">الرئيسية</a>
+                <a href="#about" class="hover:text-brand-yellow transition font-semibold">نبذة عنا</a>
+                <a href="#vision" class="hover:text-brand-yellow transition font-semibold">الرؤية والأهداف</a>
+                <a href="#contact" class="px-5 py-2 bg-brand-yellow text-brand-dark font-bold rounded-full hover:bg-yellow-500 transition shadow-lg transform hover:-translate-y-0.5">تواصل معنا</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-brand-yellow focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-gray-800">
+            <a href="#home" class="block px-6 py-3 hover:bg-gray-800 border-b border-gray-800">الرئيسية</a>
+            <a href="#about" class="block px-6 py-3 hover:bg-gray-800 border-b border-gray-800">نبذة عنا</a>
+            <a href="#vision" class="block px-6 py-3 hover:bg-gray-800 border-b border-gray-800">الرؤية والأهداف</a>
+            <a href="#contact" class="block px-6 py-3 text-brand-yellow font-bold">تواصل معنا</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl animate-fade-in-up">
+            <div class="inline-block px-4 py-1 mb-4 border border-brand-yellow text-brand-yellow rounded-full text-sm font-semibold tracking-wide uppercase bg-black/50 backdrop-blur-sm">
+                الجودة . الأمان . الاحترافية
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+                شريككم الأول في <span class="text-brand-yellow">الأمن والسلامة الصناعية</span> في ليبيا
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                نوفر أحدث معدات الحماية الشخصية والأدوات الصناعية المتطورة لضمان بيئة عمل آمنة ومنتجة في جميع القطاعات.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contact" class="px-8 py-4 bg-brand-yellow text-brand-dark font-bold rounded shadow-lg hover:bg-yellow-500 transition transform hover:scale-105 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> اتصل بنا الآن
+                </a>
+                <a href="#about" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded hover:bg-white hover:text-brand-dark transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-info-circle"></i> اكتشف المزيد
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="عمال صناعيين" class="rounded-lg shadow-2xl z-10 relative border-4 border-brand-yellow">
+                        <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-dark rounded-lg -z-0"></div>
+                        <div class="absolute -top-6 -right-6 w-32 h-32 bg-gray-200 rounded-full -z-0 opacity-50"></div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-brand-blue font-bold text-lg mb-2">من نحن</h2>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">شركة سلامة الإخوة</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                        نحن شركة ليبية رائدة مقرها بنغازي، متخصصة في توريد وتوزيع الأدوات الصناعية ومستلزمات الأمن والسلامة المهنية. تأسست الشركة على مبادئ الجودة والموثوقية، لنسد الفجوة في السوق المحلي بتوفير منتجات تطابق المعايير العالمية.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        نفتخر بكوننا الخيار الأول للمصانع، وشركات البناء، والمؤسسات النفطية في ليبيا، حيث نقدم حلولاً متكاملة تحمي العامل وتزيد من كفاءة العمل.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-yellow text-xl"></i>
+                            <span class="font-semibold">منتجات معتمدة وعالية الجودة</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-yellow text-xl"></i>
+                            <span class="font-semibold">خدمة عملاء متميزة واستشارات فنية</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-yellow text-xl"></i>
+                            <span class="font-semibold">تغطية شاملة لمدينة بنغازي وما حولها</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Goals Section -->
+    <section id="vision" class="py-20 bg-gray-100 relative overflow-hidden">
+        <!-- Background decorative icon -->
+        <i class="fa-solid fa-shield-halved absolute top-10 left-10 text-9xl text-gray-200 opacity-50 -z-0 transform -rotate-12"></i>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">رؤيتنا وأهدافنا</h2>
+                <div class="w-24 h-1 bg-brand-yellow mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Vision Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-brand-blue group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-blue transition">
+                        <i class="fa-solid fa-eye text-2xl text-brand-blue group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">رؤيتنا</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        أن نكون المرجع الأول والشريك الاستراتيجي الأكثر موثوقية في ليبيا في مجال توريد معدات السلامة والأدوات الصناعية، وأن نساهم في خلق بيئة عمل خالية من الحوادث من خلال نشر ثقافة السلامة وتوفير أفضل المعدات العالمية.
+                    </p>
+                </div>
+
+                <!-- Goals Card -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-brand-yellow group">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-yellow transition">
+                        <i class="fa-solid fa-bullseye text-2xl text-yellow-600 group-hover:text-brand-dark transition"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">أهدافنا</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-left mt-1 text-brand-yellow"></i>
+                            توفير منتجات سلامة تحمي الأرواح والممتلكات.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-left mt-1 text-brand-yellow"></i>
+                            بناء علاقات طويلة الأمد مع عملائنا مبنية على الثقة.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-left mt-1 text-brand-yellow"></i>
+                            التطوير المستمر لخدماتنا لتواكـب التطور الصناعي في ليبيا.
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-angle-left mt-1 text-brand-yellow"></i>
+                            السرعة في التوريد والالتزام بالمواعيد.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">تواصل معنا</h2>
+                <p class="text-gray-500 mt-2">نحن هنا للإجابة على استفساراتكم وتلبية طلباتكم</p>
+                <div class="w-24 h-1 bg-brand-yellow mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Phone -->
+                <div class="text-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 text-brand-blue">
+                        <i class="fa-solid fa-phone-volume text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">أرقام الهواتف</h3>
+                    <p class="text-gray-600 mb-1" dir="ltr">092 725 9520</p>
+                    <p class="text-gray-600" dir="ltr">061 909 4354</p>
+                </div>
+
+                <!-- Email -->
+                <div class="text-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 text-brand-blue">
+                        <i class="fa-solid fa-envelope text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">البريد الإلكتروني</h3>
+                    <p class="text-gray-600">info@salama-ikhwa.ly</p>
+                    <p class="text-gray-600 text-sm mt-2">(البريد متاح للاستفسارات الرسمية)</p>
+                </div>
+
+                <!-- Location -->
+                <div class="text-center p-8 bg-gray-50 rounded-xl hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-white shadow-md rounded-full flex items-center justify-center mx-auto mb-4 text-brand-blue">
+                        <i class="fa-solid fa-location-dot text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">موقعنا</h3>
+                    <p class="text-gray-600">بنغازي، ليبيا</p>
+                    <p class="text-gray-600 text-sm mt-2">نغطي كافة المناطق المجاورة</p>
+                </div>
+            </div>
+
+            <!-- Map Placeholder / Call to Action Box -->
+            >
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6 border-t-4 border-brand-yellow">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="logo.png" alt="شعار شركة سلامة الإخوة" class="w-8 h-8 object-contain rounded-full" />
+                        <h2 class="text-2xl font-bold">شركة سلامة الإخوة</h2>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-sm">
+                        نلتزم بتوفير أعلى معايير السلامة والجودة في المعدات الصناعية لعملائنا في بنغازي وليبيا.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-brand-yellow">روابط سريعة</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition">الرئيسية</a></li>
+                        <li><a href="#about" class="hover:text-white transition">من نحن</a></li>
+                        <li><a href="#vision" class="hover:text-white transition">الرؤية</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-brand-yellow">تواصل معنا</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li dir="ltr"><i class="fa-solid fa-phone mr-2 text-xs"></i> 092 725 9520</li>
+                        <li dir="ltr"><i class="fa-solid fa-phone mr-2 text-xs"></i> 061 909 4354</li>
+                        <li><i class="fa-solid fa-location-dot ml-2 text-xs"></i> بنغازي، ليبيا</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 شركة سلامة الإخوة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
